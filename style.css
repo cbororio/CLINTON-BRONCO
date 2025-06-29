@@ -1,0 +1,513 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: right;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header .logo {
+    float: left;
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+footer .social-media {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social-media li {
+    display: inline;
+    padding: 0 10px;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media(max-width: 768px){
+    header .logo,
+    header nav,
+    header .logo,
+    header nav,
+    header nav ul {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header nav ul {
+        padding-top: 10px; /* Reduced padding */
+    }
+
+    header nav li {
+        display: block; /* Ensure li takes full width for centering text */
+        padding: 8px 0; /* Adjusted padding */
+        text-align: center;
+    }
+     header nav li a {
+        display: block; /* Make the link fill the li for easier clicking */
+    }
+
+    .container {
+        width: 90%; /* Slightly increased width for better content flow on small screens */
+        padding: 0 15px; /* Adjusted padding */
+    }
+
+    /* Home page specific responsive adjustments */
+    #home-practice-areas .home-area-item {
+        flex-basis: 100%; /* Stack practice items on small screens */
+        margin-bottom: 15px;
+    }
+
+    #hero h2 {
+        font-size: 1.8em;
+    }
+    #hero p {
+        font-size: 1em;
+    }
+}
+
+/* Additional Styles for Content Pages */
+main .container section {
+    background-color: #fff;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+main .container section h2, main .container section h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* Practice Areas Page */
+.practice-area {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.practice-area:last-child {
+    border-bottom: none;
+}
+.practice-area h3 {
+    color: #0779e4;
+}
+.practice-area a {
+    color: #0779e4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Attorneys Page */
+.attorney-profile {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    overflow: hidden; /* To contain floats */
+}
+.attorney-profile img {
+    width: 120px; /* Slightly smaller image */
+    height: auto;
+    float: left;
+    margin-right: 25px;
+    border-radius: 50%; /* Circular images */
+}
+.attorney-profile h3 {
+    color: #0779e4;
+    margin-top: 0;
+}
+.attorney-profile a {
+    color: #0779e4;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Blog Page */
+.blog-post {
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.blog-post:last-child {
+    border-bottom: none;
+}
+.blog-post h3 {
+    color: #0779e4;
+}
+.blog-post .post-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+.blog-post a {
+    color: #0779e4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contact Page */
+#contact-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#contact-form-container input[type="text"],
+#contact-form-container input[type="email"],
+#contact-form-container input[type="tel"],
+#contact-form-container textarea {
+    width: calc(100% - 18px); /* Account for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width calculation */
+}
+#contact-form-container button[type="submit"] {
+    background: #0779e4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+#contact-form-container button[type="submit"]:hover {
+    background: #055aab;
+}
+
+#contact-details p {
+    margin-bottom: 8px;
+}
+#contact-details strong {
+    color: #333;
+}
+
+/* Hero Section on Home Page */
+#hero {
+    background: #0779e4;
+    color: white;
+    padding: 70px 0;
+    text-align: center;
+}
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+#hero a { /* This was the contact button, now styled more generally */
+    background: #fff;
+    color: #0779e4;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#hero a:hover {
+    background-color: #f0f0f0;
+    color: #055aab;
+}
+
+
+/* Home Page - About Snippet */
+#home-about {
+    padding: 50px 0;
+    text-align: center;
+}
+#home-about h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Home Page - Practice Areas Snippet */
+#home-practice-areas {
+    background: #f9f9f9; /* Lighter background for differentiation */
+    padding: 50px 0;
+}
+#home-practice-areas h3 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 1.8em;
+    color: #333;
+}
+.home-area-item {
+    flex-basis: calc(33.333% - 40px); /* Adjust for gap, assuming 20px gap on each side */
+    margin: 20px;
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.home-area-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.home-area-item h4 {
+    color: #0779e4;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.home-area-item p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+}
+.home-area-item a {
+    color: #0779e4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Home Page - Call to Action */
+#home-cta {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #0779e4; /* Match hero for strong CTA */
+    color: #fff;
+}
+#home-cta h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+#home-cta p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+#home-cta a { /* Style for the button in CTA */
+    background: #fff;
+    color: #0779e4;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#home-cta a:hover {
+    background-color: #f0f0f0;
+    color: #055aab;
+}
+
+/* Utility class for clearing floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Adding styling for the contact form modal (basic) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px; /* Adjusted for better spacing */
+    right: 25px; /* Adjusted for better spacing */
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #333; /* Darker on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Form Styling */
+#contactFormModal form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#contactFormModal form input[type="text"],
+#contactFormModal form input[type="email"],
+#contactFormModal form input[type="tel"],
+#contactFormModal form textarea {
+    width: calc(100% - 22px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#contactFormModal form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#contactFormModal form button[type="submit"] {
+    background-color: #0779e4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#contactFormModal form button[type="submit"]:hover {
+    background-color: #055aab;
+}
+
+#contactFormModal h3 {
+    color: #0779e4;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#contactFormModal p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* General link styling improvement */
+a.learn-more-link {
+    color: #0779e4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+a.learn-more-link:hover {
+    color: #055aab;
+    text-decoration: underline;
+}
+
+/* General CTA button styling */
+.cta-button {
+    background: #0779e4;
+    color: white !important; /* Important to override other link styles if needed */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Ensures padding and margin are respected correctly */
+}
+.cta-button:hover {
+    background-color: #055aab;
+    color: #fff !important;
+}
+
+/* Hero button specific (if different from general CTA) */
+#hero a.cta-button { /* Already styled well, ensure consistency */
+    background: #fff;
+    color: #0779e4 !important;
+}
+#hero a.cta-button:hover {
+    background-color: #f0f0f0;
+    color: #055aab !important;
+}
+
+
+/* Responsive for Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 85%; /* Wider modal on smaller screens */
+        margin: 10% auto;
+    }
+}
